@@ -66,69 +66,108 @@ F19::Run https://facebook.com
 ; --------------------------------------------------------------
 
 ; Make Ctrl + S work with cmd (windows) key
-#s::Send, ^s
+!s::Send, ^s
 
 ; Selecting
-#a::Send, ^a
+!a::Send, ^a
 
 ; Copying
-#c::Send, ^c
+!c::Send, ^c
 
 ; Pasting
-#v::Send, ^v
+!v::Send, ^v
 
 ; Cutting
-#x::Send, ^x
+!x::Send, ^x
 
 ; Opening
-#o::Send ^o
+!o::Send ^o
 
 ; Finding
-#f::Send ^f
+!f::Send ^f
 
 ; Undo
-#z::Send ^z
+!z::Send ^z
 
 ; Redo
-#y::Send ^y
+!y::Send ^y
+!+z::Send ^y
 
 ; New tab
-#t::Send ^t
+!t::Send ^t
 
 ; close tab
-#w::Send ^w
+!w::Send ^w
 
 ; Close windows (cmd + q to Alt + F4)
-#q::Send !{F4}
+!q::Send !{F4}
+
 
 ; Remap Windows + Tab to Alt + Tab.
 Lwin & Tab::AltTab
 
 ; minimize windows
-#m::WinMinimize,a
+!m::WinMinimize,a
+
+; new file/window
+!n::Send ^n
+!+n::Send ^+n
+
+
+; --------------------------------------------------------------
+; VS-CODE keyboard mappings
+; --------------------------------------------------------------
+; select same
+!d::Send ^d
+
+; hide sidebar
+!b::Send ^b
+
+; command prompt
+!+p::Send ^+p
+
+; select multilines for Edit
+#!up::Send ^!{Up}
+#!Down::Send ^!{Down}
+
+; move & copy line
+#up::Send !{Up}
+#Down::Send !{Down}
+#+up::Send !+{Up}
+#+Down::Send !+{Down}
+;following might help if it after restart commands before will move windows again
+;#right::return ;This will disable the effect of Win + -> 
+;#left::return ;This will disable the effect of Win + <- 
+
+; toggle comments
+!7::Send ^7 ;line
+!+7::Send ^+7 ;block
+
+
+
 
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
 ; --------------------------------------------------------------
 
-; Map Alt + L to @
-!l::SendInput {@}
+; Map Alt + g to @
+!g::SendInput {@}
 
 ; Map Alt + N to \
-+!7::SendInput {\}
+#+7::SendInput {\}
 
 ; Map Alt + N to ©
-!g::SendInput {©}
+;!g::SendInput {©}
 
 ; Map Alt + o to ø
-!o::SendInput {ø}
+#o::SendInput {ø}
 
 ; Map Alt + 5 to [
-!5::SendInput {[}
+#5::SendInput {[}
 
 ; Map Alt + 6 to ]
-!6::SendInput {]}
+#6::SendInput {]}
 
 ; Map Alt + E to €
 !e::SendInput {€}
@@ -137,10 +176,10 @@ Lwin & Tab::AltTab
 !-::SendInput {–}
 
 ; Map Alt + 8 to {
-!8::SendInput {{}
+#8::SendInput {{}
 
 ; Map Alt + 9 to }
-!9::SendInput {}}
+#9::SendInput {}}
 
 ; Map Alt + - to ±
 !+::SendInput {±}
@@ -149,16 +188,16 @@ Lwin & Tab::AltTab
 !r::SendInput {®}
 
 ; Map Alt + N to |
-!7::SendInput {|}
+#7::SendInput {|}
 
 ; Map Alt + W to ∑
-!w::SendInput {∑}
+#w::SendInput {∑}
 
 ; Map Alt + N to ~
-!n::SendInput {~}
+#n::SendInput {~}
 
 ; Map Alt + 3 to #
-!3::SendInput {#}
+#3::SendInput {#}
 
 
 
