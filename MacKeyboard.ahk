@@ -139,11 +139,20 @@ Lwin & Tab::AltTab
 ;#right::return ;This will disable the effect of Win + -> 
 ;#left::return ;This will disable the effect of Win + <- 
 
-; toggle comments
-!7::Send ^7 ;line
-!+7::Send ^+7 ;block
+; jump/select to beginning/end of line
+!Left::Send {Home}
+!Right::Send {End}
+!+Left::Send +{Home}
+!+Right::Send +{End}
 
+; jump/select to beginning/end of word
+#Left::Send ^{Left}
+#Right::Send {Right}
+#+Left::Send ^+{Left}
+#+Right::Send ^+{Right}
 
+; delete line
+!+K::Send ^+K 
 
 
 
