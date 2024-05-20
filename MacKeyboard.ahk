@@ -113,6 +113,8 @@ Lwin & Tab::AltTab
 !n::Send ^n
 !+n::Send ^+n
 
+; reload 
+!r::Send {F5}
 
 ; --------------------------------------------------------------
 ; VS-CODE keyboard mappings
@@ -194,7 +196,7 @@ Lwin & Tab::AltTab
 !+::SendInput {±}
 
 ; Map Alt + R to ®
-!r::SendInput {®}
+#r::SendInput {®}
 
 ; Map Alt + N to |
 #7::SendInput {|}
